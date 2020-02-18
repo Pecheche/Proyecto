@@ -3,19 +3,19 @@
     <ul>
         
         <li class="{{ setActive('home') }}">
-          <a href="/">Inicio</a>
+          <a href="/">@lang('Home')</a>
         </li>
 
         <li class="{{ setActive('about') }}">
-          <a href="/about">Acerca</a>
+          <a href="/about">@lang('About')</a>
         </li>
 
         <li class="{{ setActive('contact') }}">
-          <a href="/contact">Contacto</a>
+          <a href="/contact">@lang('Contact')</a>
         </li>
         
         <li class="{{ setActive('portfolio') }}">
-          <a href="/portfolio">Portafolio</a>
+          <a href="/portfolio">@lang('Portfolio')</a>
         </li>
 
       </li>
