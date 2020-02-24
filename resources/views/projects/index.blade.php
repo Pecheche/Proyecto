@@ -11,15 +11,18 @@
 
 <ul>
 
-    @forelse ($portfolio as $portfolioItem)
+    @forelse ($projects as $project)
 
-        <li>{{$portfolioItem ['title'] }}</li>
+        <li><a href="{{route('projects.show', $project->id)}}"> {{ $project->title }} </a></li>
 
     @empty
 
         <li>No hay proyectos para mostrar</li>
 
     @endforelse
+
+
+        {{ $projects->links() }} 
 
 
 </ul>

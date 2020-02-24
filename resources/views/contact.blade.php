@@ -8,7 +8,7 @@
 
 <br>
 
-<form method="POST" action="{{ route('contact') }}">
+<form method="POST" action="{{ route('messages.store') }}">
 
     @csrf
 

@@ -18,10 +18,21 @@
 
 route::view('/','home')->name('home');
 route::view('/about', 'about')->name('about');
-route::view('/contact', 'contact')->name('contact');
-route::get('/portfolio', 'portfolioController@index')->name('portfolio');
 
-route::post('contact', 'messagesController@store');
+
+route::get('/portfolio', 'projectController@index')->name('projects.index');
+route::get('/portfolio/crear', 'projectController@create')->name('projects.create');
+
+route::post('/portfolio', 'projectController@store')->name('projects.store');
+
+route::get('/portfolio/{id}', 'projectController@show')->name('projects.show');
+
+
+
+
+
+route::view('/contact', 'contact')->name('contact');
+route::post('contact', 'messageController@store')->name('messages.store');
 
 
 
