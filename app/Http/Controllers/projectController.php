@@ -54,7 +54,12 @@ class projectController extends Controller
     public function store()
     {
 
-        Project::create( request()->all() );
+        Project::create([
+
+            'title' => request('title'),
+            'description' => request('description'),
+            'url' => request('url'),
+        ]);
 
         return redirect()->route('project.index');
 

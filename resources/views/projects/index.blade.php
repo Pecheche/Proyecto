@@ -1,11 +1,15 @@
 @extends('layout')
 
-@section('titulo', 'Portafolio')
+@section('titulo', 'Portfolio')
 
 @section('contenido')
 
 
-<h1>Portafolio</h1> 
+<h1>proyectos</h1> 
+
+<br>
+
+<a href="{{route('projects.create')}}">Crear Nuevo Proyecto</a>
 
 <br>
 
