@@ -61,7 +61,7 @@ class projectController extends Controller
             'url' => request('url'),
         ]);
 
-        return redirect()->route('project.index');
+        return redirect()->route('projects.index');
 
     }
 
