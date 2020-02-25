@@ -26,12 +26,13 @@ class projectController extends Controller
 
 
 
+
     public function show($id)
     {
 
         return view('projects.show', [
 
-            'project' => Project::find($id)
+            'project' => Project::findOrFail($id)
 
         ]);
 
@@ -62,5 +63,32 @@ class projectController extends Controller
 
     }
 
+
+
+
+
+    public function edit(Project $project)
+    {
+
+        return view('projects.edit', [
+
+            'project' => $project
+
+        ]);
+
+    }
+
+
+
+
+
+    public function update(Project $project, CreateProjectRequest $request)
+    {
+
+        $project->update($request->validated() );
+
+        return redirect()->route('projects.index', $project);
+
+    }
 
 }

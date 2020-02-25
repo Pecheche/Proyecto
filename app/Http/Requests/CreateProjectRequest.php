@@ -23,10 +23,10 @@ class CreateProjectRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+        return ([
             'title' => 'required',
             'description' =>  'required',
             'url' => 'required',
-        ];
+        ]);
     }
 }

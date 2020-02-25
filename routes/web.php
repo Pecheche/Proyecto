@@ -22,12 +22,13 @@ route::view('/about', 'about')->name('about');
 
 route::get('/portfolio', 'projectController@index')->name('projects.index');
 route::get('/portfolio/crear', 'projectController@create')->name('projects.create');
-
 route::get('/portfolio/{project}/editar', 'projectController@edit')->name('projects.edit');
+route::patch('/portfolio/{project}', 'projectController@update')->name('projects.update');
+
 
 route::post('/portfolio', 'projectController@store')->name('projects.store');
 
-route::get('/portfolio/{id}', 'projectController@show')->name('projects.show');
+route::get('/portfolio/{project}', 'projectController@show')->name('projects.show');
 
 
 
