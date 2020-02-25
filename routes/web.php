@@ -25,6 +25,7 @@ route::get('/portfolio/crear', 'projectController@create')->name('projects.creat
 route::get('/portfolio/{project}/editar', 'projectController@edit')->name('projects.edit');
 route::patch('/portfolio/{project}', 'projectController@update')->name('projects.update');
 
+route::delete('/portfolio/{project}', 'projectController@destroy')->name('projects.destroy');
 
 route::post('/portfolio', 'projectController@store')->name('projects.store');
 
